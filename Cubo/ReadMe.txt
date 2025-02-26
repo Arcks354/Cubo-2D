@@ -1,0 +1,1 @@
+Cubo magico 2x2
