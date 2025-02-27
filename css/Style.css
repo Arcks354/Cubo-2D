@@ -35,6 +35,10 @@ body{
     background-color: rgb(125, 126, 125);
 }
 
+.Botao {
+    background-color: rgb(168, 243, 248);
+}
+
 .Cubo {
     position: absolute;
     width: 400px;

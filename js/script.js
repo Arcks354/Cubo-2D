@@ -52,6 +52,7 @@ quadX.style.backgroundColor = 'rgb(255,120, 0)';
 //#endregion cores
 
 function mudarCor(sentido, copinh1, copinh2, copinh3, copinh4, caneca1, caneca2, caneca3, caneca4, caneca5, caneca6, caneca7, caneca8){
+    
     var copinho1 = document.getElementById(copinh1);
     var copinho2 = document.getElementById(copinh2);
     var copinho3 = document.getElementById(copinh3);
