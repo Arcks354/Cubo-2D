@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
     
 <head>
     <meta charset="UTF-8">
@@ -14,10 +14,21 @@
     <div class="Painel">
         <div class="PainelResult">
             <h1 class="Titulo">Cubo Mágico 2D-2x2</h1>
+            <button onclick="mudarCor( 0,'A', 'B', 'C', 'D')">botão1-</button>
+            <button onclick="mudarCor( 1,'A', 'B', 'C', 'D')">botão2+</button>
+            <button onclick="mudarCor( 0,'E', 'F', 'G', 'H')">botão3+</button>
+            <button onclick="mudarCor( 1,'E', 'F', 'G', 'H')">botão4-</button>
+            <button onclick="mudarCor( 0,'I', 'J', 'K', 'L')">botão5-</button>
+            <button onclick="mudarCor( 1,'I', 'J', 'K', 'L')">botão6+</button>
+            <button onclick="mudarCor( 0,'M', 'N', 'O', 'P')">botão1-</button>
+            <button onclick="mudarCor( 1,'M', 'N', 'O', 'P')">botão2+</button>
+            <button onclick="mudarCor( 0,'Q', 'R', 'S', 'T')">botão3+</button>
+            <button onclick="mudarCor( 1,'Q', 'R', 'S', 'T')">botão4-</button>
+            <button onclick="mudarCor( 0,'U', 'V', 'W', 'X')">botão5-</button>
+            <button onclick="mudarCor( 1,'U', 'V', 'W', 'X')">botão6+</button>
         </div>
 
-        <button onclick="mudarCor( 0,'A', 'B', 'C', 'D')">botão1</button>
-        <button onclick="mudarCor( 1,'A', 'B', 'C', 'D')">botão2</button>
+        
        <!-- Cubo Principal -->
         <div class="Cubo">
             <div class="Face1">
@@ -27,37 +38,37 @@
                 <div id="D" class="D FormatoFace1"></div>
             </div>
             <div class="Face2">
-                <div class="E FormatoFace2"></div>
+                <div id="E" class="E FormatoFace2"></div>
                 <div id="F" class="F FormatoFace2"></div>
-                <div class="G FormatoFace2"></div>
-                <div class="H FormatoFace2"></div>
+                <div id="G" class="G FormatoFace2"></div>
+                <div id="H" class="H FormatoFace2"></div>
             </div>
             <div class="Face3">
-                <div class="I FormatoFace3"></div>
-                <div class="J FormatoFace3"></div>
-                <div class="K FormatoFace3"></div>
-                <div class="L FormatoFace3"></div>
+                <div id="I" class="I FormatoFace3"></div>
+                <div id="J" class="J FormatoFace3"></div>
+                <div id="K" class="K FormatoFace3"></div>
+                <div id="L" class="L FormatoFace3"></div>
             </div>
         </div>  
         <!-- Cubo Visão de trás -->
         <div class="CuboVerso">
             <div class="Face4">
-                <div class="M FormatoFace1"></div>
-                <div class="N FormatoFace1"></div>
-                <div class="O FormatoFace1"></div>
-                <div class="P FormatoFace1"></div>
+                <div id="M" class="M FormatoFace1"></div>
+                <div id="N" class="N FormatoFace1"></div>
+                <div id="O" class="O FormatoFace1"></div>
+                <div id="P" class="P FormatoFace1"></div>
             </div>
             <div class="Face5">
-                <div class="Q FormatoFace2"></div>
-                <div class="R FormatoFace2"></div>
-                <div class="S FormatoFace2"></div>
-                <div class="T FormatoFace2"></div>
+                <div id="Q" class="Q FormatoFace2"></div>
+                <div id="R" class="R FormatoFace2"></div>
+                <div id="S" class="S FormatoFace2"></div>
+                <div id="T" class="T FormatoFace2"></div>
             </div>
             <div class="Face6">
-                <div class="U FormatoFace3"></div>
-                <div class="V FormatoFace3"></div>
-                <div class="W FormatoFace3"></div>
-                <div class="X FormatoFace3"></div>
+                <div id="U" class="U FormatoFace3"></div>
+                <div id="V" class="V FormatoFace3"></div>
+                <div id="W" class="W FormatoFace3"></div>
+                <div id="X" class="X FormatoFace3"></div>
             </div>
         </div>  
     </div>
