@@ -36,7 +36,13 @@ body{
 }
 
 .Botao {
-    background-color: rgb(168, 243, 248);
+    background-image: url('png/seta.png');
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-position: left center; /* Posiciona a imagem à esquerda */
+    padding-left: 40px; /* Espaço para a imagem */
+    height: 40px; /* Altura do botão */
+    width: 150px; /* Largura do botão */
+    border: none; /* Remove borda */
 }
 
 .Cubo {
