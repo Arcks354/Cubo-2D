@@ -36,13 +36,20 @@ body{
 }
 
 .Botao {
-    background-image: url('png/seta.png');
+    background-color: transparent;
+    background-image: url('/png/seta.png');
     background-repeat: no-repeat; /* Impede que a imagem se repita */
-    background-position: left center; /* Posiciona a imagem à esquerda */
-    padding-left: 40px; /* Espaço para a imagem */
-    height: 40px; /* Altura do botão */
-    width: 150px; /* Largura do botão */
+    background-position-x: 75%;
+    height: 100px; /* Altura do botão */
+    width: 90px; /* Largura do botão */
     border: none; /* Remove borda */
+    background-size: 130px auto;
+    cursor: pointer;
+    filter: hue-rotate(-50deg);
+    
+}
+.Botao:hover {
+    filter: brightness(4)  contrast(2); /* Aumenta o brilho ao passar o mouse */
 }
 
 .Cubo {
@@ -51,7 +58,7 @@ body{
     height: 400px;
     background-color: rgb(82, 82, 82);
     left: 10%;
-    top :10%;
+    top :20%;
 
 }
 
