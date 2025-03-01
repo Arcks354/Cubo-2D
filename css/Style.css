@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(58, 71, 83);
 }
 
 .Painel {
@@ -17,49 +17,121 @@ body{
 }
 
 .PainelResult {
-    position: relative;
-    width: 20%;
-    height: 5%;
-    /* margin: 0 auto; */
-    background-color: rgb(148, 148, 148);
-    left: 5%;
-    top :1%;
-
-}
-
-.Titulo {
-    position: relative;
-    width: 90%;
-    height: 90%;
-    margin: 0 auto;
-    background-color: rgb(125, 126, 125);
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;  /* Centraliza verticalmente */
+    padding-right: 40%;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: rgb(19, 43, 51);
+    top :-1%;
+    font-size: clamp(40px, 6vw, 60px);
+    color: white;
 }
 
 .Botao {
+    position: absolute;
     background-color: transparent;
     background-image: url('/png/seta.png');
     background-repeat: no-repeat; /* Impede que a imagem se repita */
     background-position-x: 75%;
-    height: 100px; /* Altura do botão */
-    width: 90px; /* Largura do botão */
+    height: 15%; /* Altura do botão */
+    width: 15%; /* Largura do botão */
     border: none; /* Remove borda */
-    background-size: 130px auto;
+    background-size: 100% auto;
     cursor: pointer;
-    filter: hue-rotate(-50deg);
-    
+    z-index: 10;
+    filter: opacity(0.1);
 }
 .Botao:hover {
-    filter: brightness(4)  contrast(2); /* Aumenta o brilho ao passar o mouse */
+    filter: brightness(1.5)  opacity(1); /* Aumenta o brilho ao passar o mouse */
+}
+.Botao1 {
+    left: -10%;
+    top: 5%;
+    rotate: 45deg;
+    transform: scaleX(-1);
+}
+
+.Botao2 {
+    right: 10%;
+    bottom: -10%;
+    rotate: 45deg;
+}
+
+.Botao3 {
+    left: -15%;
+    top: 30%;
+    rotate: -160deg;
+}
+
+.Botao4 {
+    right: -15%;
+    top: 15%;
+    rotate: 160deg;
+    transform: scaleX(-1);
+}
+.Botao5 {
+    right: 35%;
+    bottom: -10%;
+    rotate: -60deg;
+    transform: scaleX(-1);
+}
+
+.Botao6 {
+    right: 10%;
+    top: -5%;
+    rotate: -60deg;
+}
+
+.Botao7 {
+    left: 10%;
+    bottom: -5%;
+    rotate: -60deg;
+    transform: scaleX(-1);
+}
+
+.Botao8 {
+    right: 45%;
+    top: -10%;
+    rotate: -60deg;
+}
+
+.Botao9 {
+    left: -15%;
+    bottom: 20%;
+    rotate: -160deg;
+}
+
+.Botao10 {
+    right: -15%;
+    bottom: 30%;
+    rotate: 160deg;
+    transform: scaleX(-1);
+}
+
+.Botao11 {
+    left: 5%;
+    top: -5%;
+    rotate: 45deg;
+    transform: scaleX(-1);
+}
+
+.Botao12 {
+    right: -2%;
+    bottom: 1%;
+    rotate: 45deg;
 }
 
 .Cubo {
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background-color: rgb(82, 82, 82);
     left: 10%;
     top :20%;
-
+    width: 30vw; /* 20% da largura da tela */
+    height: 30vw; /* Mantém o quadrado proporcional */
+    max-width: 400px; /* Define um limite */
+    max-height: 400px;
 }
 
 .Face1 {
@@ -172,11 +244,12 @@ body{
 
 .CuboVerso {
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background-color: rgb(82, 82, 82);
-    left: 45%;
-    top :10%;
+    width: 30vw; /* 20% da largura da tela */
+    height: 30vw; /* Mantém o quadrado proporcional */
+    max-width: 400px; /* Define um limite */
+    max-height: 400px;
+    left: 60%;
+    top :20%;
 
 }
 
