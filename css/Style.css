@@ -33,7 +33,7 @@ body{
 .Botao {
     position: absolute;
     background-color: transparent;
-    background-image: url('/png/seta.png');
+    background-image: url('../png/seta.png');
     background-repeat: no-repeat; /* Impede que a imagem se repita */
     background-position-x: 75%;
     height: 15%; /* Altura do botão */
