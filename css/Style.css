@@ -41,7 +41,7 @@ body{
 .BotaoEmbaralha {
     position: absolute;
     background-color: transparent;
-    background-image: url('../png/embaralhar.png');
+    background-image: url('../embaralhar.png');
     background-repeat: no-repeat; /* Impede que a imagem se repita */
     width: 15vw; /* 20% da largura da tela */
     height: 15vw; /* Mantém o quadrado proporcional */
