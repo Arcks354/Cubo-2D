@@ -129,7 +129,7 @@ function mudarCor(sentido, copinh1, copinh2, copinh3, copinh4, caneca1, caneca2,
 
     }
     
-    let som = new Audio("./som/click.mp3"); // Substitua pelo caminho correto do seu arquivo
+    let som = new Audio("som/click.mp3"); // Substitua pelo caminho correto do seu arquivo
     som.play();
     // console.log(copinho.style.backgroundColor);
 }
