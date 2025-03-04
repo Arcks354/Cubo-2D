@@ -72,7 +72,7 @@ body{
     background-size: 100% auto;
     cursor: pointer;
     z-index: 10;
-    filter: opacity(0.1);
+    filter: opacity(0.05);
 }
 .Botao:hover {
     filter: brightness(1.5)  opacity(1); /* Aumenta o brilho ao passar o mouse */
