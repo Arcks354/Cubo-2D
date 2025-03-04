@@ -11,7 +11,7 @@ body{
 .Painel {
     position: absolute;
     width: 100%;
-    height: 950px;
+    height: 100%;
     margin: 0 auto;
 
 }
@@ -20,7 +20,7 @@ body{
     display: flex;
     justify-content: center;  /* Centraliza horizontalmente */
     align-items: center;  /* Centraliza verticalmente */
-    padding-right: 40%;
+    padding-right: 0%;
     position: absolute;
     width: 100%;
     height: 10%;
@@ -28,6 +28,36 @@ body{
     top :-1%;
     font-size: clamp(40px, 6vw, 60px);
     color: white;
+}
+.Final{
+    position: absolute;
+    width: 100%;
+    height: 9%;
+    margin: 0 auto;
+    background-color: rgb(19, 43, 51);
+    bottom: 0%;
+}
+
+.BotaoEmbaralha {
+    position: absolute;
+    background-color: transparent;
+    background-image: url('../png/embaralhar.png');
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    width: 15vw; /* 20% da largura da tela */
+    height: 15vw; /* Mantém o quadrado proporcional */
+    max-width: 70px; /* Define um limite */
+    max-height: 70px;
+    border: none; /* Remove borda */
+    background-size: 100%;
+    cursor: pointer;
+    z-index: 10;
+    top: 1%;
+    left: 3%;
+    filter: opacity(0.5);
+
+}
+.BotaoEmbaralha:hover {
+    filter: brightness(1.1)  opacity(1); /* Aumenta o brilho ao passar o mouse */
 }
 
 .Botao {
@@ -128,10 +158,10 @@ body{
     position: absolute;
     left: 10%;
     top :20%;
-    width: 30vw; /* 20% da largura da tela */
-    height: 30vw; /* Mantém o quadrado proporcional */
-    max-width: 400px; /* Define um limite */
-    max-height: 400px;
+    width: 33vw; /* 20% da largura da tela */
+    height: 33vw; /* Mantém o quadrado proporcional */
+    max-width: 500px; /* Define um limite */
+    max-height: 500px;
 }
 
 .Face1 {
@@ -146,6 +176,7 @@ body{
     width: 50%;
     height: 50%;
     position: absolute;
+    border: 1PX solid rgb(255, 255, 255);
 }
 
 .A {
@@ -183,6 +214,7 @@ body{
     height: 100%;
     position: absolute;
     clip-path: polygon(0% 80%, 25% 35%, 100% 55%, 75% 100%);
+    border: 1PX solid rgb(255, 255, 255);
 }
 
 .E {
@@ -218,6 +250,7 @@ body{
     width: 50%;
     height: 50%;
     position: absolute;
+    border: 1PX solid rgb(255, 255, 255);
 }
 
 .I {
@@ -244,10 +277,10 @@ body{
 
 .CuboVerso {
     position: absolute;
-    width: 30vw; /* 20% da largura da tela */
-    height: 30vw; /* Mantém o quadrado proporcional */
-    max-width: 400px; /* Define um limite */
-    max-height: 400px;
+    width: 33vw; /* 20% da largura da tela */
+    height: 33vw; /* Mantém o quadrado proporcional */
+    max-width: 500px; /* Define um limite */
+    max-height: 500px;
     left: 60%;
     top :20%;
 

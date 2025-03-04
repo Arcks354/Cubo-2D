@@ -13,27 +13,28 @@
 <body>
     <div class="Painel">
         <div class="PainelResult">Cubo Mágico 2x2</div>
+        <button class="BotaoEmbaralha" onclick="embaralha()"></button>
         
         <!-- Cubo Principal -->
         <div class="Cubo">
             <!-- primeiro parametro é sentido do giro(horario anti horario)/ do 2° ao 5° parametro é as facinhas da face principal/ da 6° em diante é as faces laterais -->
-            <button class="Botao Botao1" onclick="mudarCor( 0,'A', 'B', 'C', 'D', 'E', 'F', 'I', 'K', 'S', 'Q', 'M', 'O')"></button>
-            <button class="Botao Botao2" onclick="mudarCor( 1,'A', 'B', 'C', 'D', 'E', 'F', 'I', 'K', 'S', 'Q', 'M', 'O')"></button>
+            <button class="Botao Botao1" onclick="comandoCor(0, 1)"></button>
+            <button class="Botao Botao2" onclick="comandoCor(1, 1)"></button>
             
-            <button class="Botao Botao3" onclick="mudarCor( 0,'E', 'F', 'G', 'H', 'A', 'B', 'I', 'J', 'W', 'X', 'O', 'P')"></button>
-            <button class="Botao Botao4" onclick="mudarCor( 1,'E', 'F', 'G', 'H', 'A', 'B', 'I', 'J', 'W', 'X', 'O', 'P')"></button>
+            <button class="Botao Botao3" onclick="comandoCor(0, 2)"></button>
+            <button class="Botao Botao4" onclick="comandoCor(1, 2)"></button>
             
-            <button class="Botao Botao5" onclick="mudarCor( 0,'I', 'J', 'K', 'L', 'B', 'D', 'H', 'F', 'X', 'V', 'T', 'S')"></button>
-            <button class="Botao Botao6" onclick="mudarCor( 1,'I', 'J', 'K', 'L', 'B', 'D', 'H', 'F', 'X', 'V', 'T', 'S')"></button>
+            <button class="Botao Botao5" onclick="comandoCor(0, 3)"></button>
+            <button class="Botao Botao6" onclick="comandoCor(1, 3)"></button>
             
-            <button class="Botao Botao7" onclick="mudarCor( 0,'M', 'N', 'O', 'P', 'A', 'C', 'G', 'E', 'W', 'U', 'R', 'Q')"></button>
-            <button class="Botao Botao8" onclick="mudarCor( 1,'M', 'N', 'O', 'P', 'A', 'C', 'G', 'E', 'W', 'U', 'R', 'Q')"></button>
+            <button class="Botao Botao7" onclick="comandoCor(0, 4)"></button>
+            <button class="Botao Botao8" onclick="comandoCor(1, 4)"></button>
             
-            <button class="Botao Botao9" onclick="mudarCor( 0,'Q', 'R', 'S', 'T', 'C', 'D', 'K', 'L', 'U', 'V', 'M', 'N')"></button>
-            <button class="Botao Botao10" onclick="mudarCor( 1,'Q', 'R', 'S', 'T', 'C', 'D', 'K', 'L', 'U', 'V', 'M', 'N')"></button>
+            <button class="Botao Botao9" onclick="comandoCor(0, 5)"></button>
+            <button class="Botao Botao10" onclick="comandoCor(1, 5)"></button>
             
-            <button class="Botao Botao11" onclick="mudarCor( 0,'U', 'V', 'W', 'X', 'G', 'H', 'J', 'L', 'T', 'R', 'N', 'P')"></button>
-            <button class="Botao Botao12" onclick="mudarCor( 1,'U', 'V', 'W', 'X', 'G', 'H', 'J', 'L', 'T', 'R', 'N', 'P')"></button>
+            <button class="Botao Botao11" onclick="comandoCor(0, 6)"></button>
+            <button class="Botao Botao12" onclick="comandoCor(1, 6)"></button>
             
             <div class="Face1">
                 <div id="A" class="A FormatoFace1"></div>
@@ -58,23 +59,23 @@
         <!-- Cubo Visão de trás -->
         <div class="CuboVerso">
             <!-- primeiro parametro é sentido do giro(horario anti horario)/ do 2° ao 5° parametro é as facinhas da face principal/ da 6° em diante é as faces laterais -->
-            <button class="Botao Botao8" onclick="mudarCor( 0,'A', 'B', 'C', 'D', 'E', 'F', 'I', 'K', 'S', 'Q', 'M', 'O')"></button>
-            <button class="Botao Botao7" onclick="mudarCor( 1,'A', 'B', 'C', 'D', 'E', 'F', 'I', 'K', 'S', 'Q', 'M', 'O')"></button>
+            <button class="Botao Botao8" onclick="comandoCor(0, 1)"></button>
+            <button class="Botao Botao7" onclick="comandoCor(1, 1)"></button>
             
-            <button class="Botao Botao10" onclick="mudarCor( 0,'E', 'F', 'G', 'H', 'A', 'B', 'I', 'J', 'W', 'X', 'O', 'P')"></button>
-            <button class="Botao Botao9" onclick="mudarCor( 1,'E', 'F', 'G', 'H', 'A', 'B', 'I', 'J', 'W', 'X', 'O', 'P')"></button>
+            <button class="Botao Botao10" onclick="comandoCor(0, 2)"></button>
+            <button class="Botao Botao9" onclick="comandoCor(1, 2)"></button>
             
-            <button class="Botao Botao12" onclick="mudarCor( 0,'I', 'J', 'K', 'L', 'B', 'D', 'F', 'H', 'X', 'V', 'T', 'S')"></button>
-            <button class="Botao Botao11" onclick="mudarCor( 1,'I', 'J', 'K', 'L', 'B', 'D', 'F', 'H', 'X', 'V', 'T', 'S')"></button>
+            <button class="Botao Botao12" onclick="comandoCor(0, 3)"></button>
+            <button class="Botao Botao11" onclick="comandoCor(1, 3)"></button>
             
-            <button class="Botao Botao2" onclick="mudarCor( 0,'M', 'N', 'O', 'P', 'A', 'C', 'E', 'G', 'W', 'U', 'R', 'Q')"></button>
-            <button class="Botao Botao1" onclick="mudarCor( 1,'M', 'N', 'O', 'P', 'A', 'C', 'E', 'G', 'W', 'U', 'R', 'Q')"></button>
+            <button class="Botao Botao2" onclick="comandoCor(0, 4)"></button>
+            <button class="Botao Botao1" onclick="comandoCor(1, 4)"></button>
             
-            <button class="Botao Botao4" onclick="mudarCor( 0,'Q', 'R', 'S', 'T', 'C', 'D', 'K', 'L', 'U', 'V', 'M', 'N')"></button>
-            <button class="Botao Botao3" onclick="mudarCor( 1,'Q', 'R', 'S', 'T', 'C', 'D', 'K', 'L', 'U', 'V', 'M', 'N')"></button>
+            <button class="Botao Botao4" onclick="comandoCor(0, 5)"></button>
+            <button class="Botao Botao3" onclick="comandoCor(1, 5)"></button>
             
-            <button class="Botao Botao6" onclick="mudarCor( 0,'U', 'V', 'W', 'X', 'G', 'H', 'J', 'L', 'T', 'R', 'N', 'P')"></button>
-            <button class="Botao Botao5" onclick="mudarCor( 1,'U', 'V', 'W', 'X', 'G', 'H', 'J', 'L', 'T', 'R', 'N', 'P')"></button>
+            <button class="Botao Botao6" onclick="comandoCor(0, 6)"></button>
+            <button class="Botao Botao5" onclick="comandoCor(1, 6)"></button>
             
             
             <div class="Face4">
@@ -97,7 +98,7 @@
             </div>
         </div>  
     </div>
-   
+   <div class="Final"></div>
     
 
 </body>

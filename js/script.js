@@ -24,33 +24,58 @@ const quadV = document.getElementById('V');
 const quadW = document.getElementById('W');
 const quadX = document.getElementById('X');
 // #endregion QUADS
-//#region cores
-quadA.style.backgroundColor = 'rgb(255, 0, 0)';
-quadB.style.backgroundColor = 'rgb(235, 0, 0)';
-quadC.style.backgroundColor = 'rgb(215, 0, 0)';
-quadD.style.backgroundColor = 'rgb(195, 0, 0)';
-quadE.style.backgroundColor = 'rgb(255, 255, 0)';
-quadF.style.backgroundColor = 'rgb(235, 235, 0)';
-quadG.style.backgroundColor = 'rgb(215,215,0)';
-quadH.style.backgroundColor = 'rgb(195,195,0)';
-quadI.style.backgroundColor = 'rgb(0, 255, 0)';
-quadJ.style.backgroundColor = 'rgb(0,235,0)';
-quadK.style.backgroundColor = 'rgb(0,215,0)';
-quadL.style.backgroundColor = 'rgb(0,195,0)';
-quadM.style.backgroundColor = 'rgb(0,0,255)';
-quadN.style.backgroundColor = 'rgb(0,0,235)';
-quadO.style.backgroundColor = 'rgb(0,0,215)';
-quadP.style.backgroundColor = 'rgb(0,0,195)';
-quadQ.style.backgroundColor = 'rgb(20,20,20)';
-quadR.style.backgroundColor = 'rgb(30,30,30)';
-quadS.style.backgroundColor = 'rgb(10,10,10)';
-quadT.style.backgroundColor = 'rgb(0,0,0)';
-quadU.style.backgroundColor = 'rgb(255,155, 0)';
-quadV.style.backgroundColor = 'rgb(245,140, 0)';
-quadW.style.backgroundColor = 'rgb(255,130, 0)';
-quadX.style.backgroundColor = 'rgb(255,120, 0)';
-//#endregion cores
+//#region cores das faces
+quadA.style.backgroundColor = 'red';
+quadB.style.backgroundColor = 'red';
+quadC.style.backgroundColor = 'red';
+quadD.style.backgroundColor = 'red';
+quadE.style.backgroundColor = 'yellow';
+quadF.style.backgroundColor = 'yellow';
+quadG.style.backgroundColor = 'yellow';
+quadH.style.backgroundColor = 'yellow';
+quadI.style.backgroundColor = 'green';
+quadJ.style.backgroundColor = 'green';
+quadK.style.backgroundColor = 'green';
+quadL.style.backgroundColor = 'green';
+quadM.style.backgroundColor = 'blue';
+quadN.style.backgroundColor = 'blue';
+quadO.style.backgroundColor = 'blue';
+quadP.style.backgroundColor = 'blue';
+quadQ.style.backgroundColor = 'black';
+quadR.style.backgroundColor = 'black';
+quadS.style.backgroundColor = 'black';
+quadT.style.backgroundColor = 'black';
+quadU.style.backgroundColor = 'orange';
+quadV.style.backgroundColor = 'orange';
+quadW.style.backgroundColor = 'orange';
+quadX.style.backgroundColor = 'orange';
+//#endregion cores das faces
 
+// função comandoCor é chamada usando botões de virar o cubo e ao embaralhar
+//ela é responsavel por chamar a função mudarCor com as faces que irão mover
+function comandoCor(direcao, comando){
+    //console.log(comando);
+    if (comando == 1){  mudarCor(direcao,'A', 'B', 'C', 'D', 'E', 'F', 'I', 'K', 'S', 'Q', 'M', 'O')}
+    else{
+        if (comando == 2){  mudarCor(direcao,'E', 'F', 'G', 'H', 'A', 'B', 'I', 'J', 'X', 'W', 'P', 'O')}
+        else{
+            if (comando == 3){  mudarCor(direcao,'I', 'J', 'K', 'L', 'D', 'B', 'F', 'H', 'X', 'V', 'T', 'S')}
+            else{
+                if (comando == 4){  mudarCor(direcao,'N', 'M', 'P', 'O', 'C', 'A', 'E', 'G', 'W', 'U', 'R', 'Q')}
+                else{
+                    if (comando == 5){  mudarCor(direcao,'R', 'Q', 'T', 'S', 'C', 'D', 'K', 'L', 'V', 'U', 'N', 'M')}
+                    else{
+                        if (comando == 6){  mudarCor(direcao,'V', 'U', 'X', 'W', 'G', 'H', 'J', 'L', 'T', 'R', 'N', 'P')}
+                        else{   console.log(comando);   }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+//funcão mudarCor é chamada através da função comandoCor, ela recebe as faces que irão mover e faz o processo de troca
 function mudarCor(sentido, copinh1, copinh2, copinh3, copinh4, caneca1, caneca2, caneca3, caneca4, caneca5, caneca6, caneca7, caneca8){
     
     var copinho1 = document.getElementById(copinh1);
@@ -106,4 +131,21 @@ function mudarCor(sentido, copinh1, copinh2, copinh3, copinh4, caneca1, caneca2,
     
 
     // console.log(copinho.style.backgroundColor);
+}
+
+
+function esperar(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function embaralha(){
+    let i=0;
+    while(i <30){
+        const x = Math.floor(Math.random() * 2);
+        const y = Math.floor(Math.random() * 6) + 1;
+        console.log(i);
+        comandoCor(x, y);
+        i++;
+        await esperar(50); // Espera 1 segundo antes de continuar
+    }
 }
